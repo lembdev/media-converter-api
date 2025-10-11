@@ -5,6 +5,7 @@ RUN apk add --no-cache nodejs npm
 # ----------------------------
 FROM base AS builder
 COPY package*.json ./
+ENV HUSKY=0
 RUN npm install
 COPY . .
 RUN npm run build
@@ -12,6 +13,7 @@ RUN npm run build
 # ----------------------------
 FROM base AS production
 COPY package*.json ./
+ENV HUSKY=0
 RUN npm install --production 
 
 # ----------------------------

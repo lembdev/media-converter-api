@@ -1,10 +1,13 @@
 import { ValidationPipe } from '@nestjs/common';
 import { NestFactory } from '@nestjs/core';
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
+import { appConfig, IAppConfig } from './infra/configs';
 import { MainModule } from './main.module';
 
 async function bootstrap() {
   const app = await NestFactory.create(MainModule);
+
+  const { port } = app.get<IAppConfig>(appConfig.KEY);
 
   // Enable validation
   app.useGlobalPipes(
@@ -27,6 +30,6 @@ async function bootstrap() {
   const document = SwaggerModule.createDocument(app, config);
   SwaggerModule.setup('api/docs', app, document);
 
-  await app.listen(process.env.PORT ?? 3000);
+  await app.listen(port);
 }
 bootstrap();

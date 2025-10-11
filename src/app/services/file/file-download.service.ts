@@ -13,16 +13,46 @@ import {
 export class FileDownloadService {
   private readonly MAX_FILE_SIZE = 50 * 1024 * 1024; // 50MB
   private readonly CACHE_DIR = '/tmp/media-cache';
+  private readonly MAX_REDIRECTS = 5;
 
   async downloadFile(url: string, filename: string): Promise<string> {
     await mkdir(this.CACHE_DIR, { recursive: true });
 
     const filePath = join(this.CACHE_DIR, filename);
+    return this.downloadWithRedirects(url, filePath, 0);
+  }
 
+  private downloadWithRedirects(
+    url: string,
+    filePath: string,
+    redirectCount: number,
+  ): Promise<string> {
     return new Promise((resolve, reject) => {
+      if (redirectCount > this.MAX_REDIRECTS) {
+        reject(
+          new BadRequestException('Too many redirects while downloading file'),
+        );
+        return;
+      }
+
       const client = url.startsWith('https://') ? https : http;
 
       const request = client.get(url, (response) => {
+        // Handle redirects
+        if (
+          response.statusCode &&
+          response.statusCode >= 300 &&
+          response.statusCode < 400 &&
+          response.headers.location
+        ) {
+          // Follow redirect
+          const redirectUrl = response.headers.location;
+          this.downloadWithRedirects(redirectUrl, filePath, redirectCount + 1)
+            .then(resolve)
+            .catch(reject);
+          return;
+        }
+
         if (response.statusCode !== 200) {
           reject(
             new BadRequestException(

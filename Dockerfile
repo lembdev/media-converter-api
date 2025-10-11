@@ -22,7 +22,7 @@ FROM alpine:3.22.2 AS runner
 WORKDIR /app
 
 LABEL maintainer="lembdev@gmail.com"
-LABEL version="1.2.1"
+LABEL version="1.2.2"
 LABEL description="Media converter API with FFmpeg and FFprobe support"
 LABEL org.opencontainers.image.source="https://github.com/lembdev/media-converter-api"
 LABEL org.opencontainers.image.vendor="lembdev"

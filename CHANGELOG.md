@@ -1,3 +1,9 @@
+## [1.2.2](https://github.com/lembdev/media-converter-api/compare/v1.2.1...v1.2.2) (2025-10-11)
+
+### Bug Fixes
+
+* update Dockerfile to use npm ci for consistent dependency installation ([f77156d](https://github.com/lembdev/media-converter-api/commit/f77156dd84d51eda449e7897550dcc5d7b0cd085))
+
 ## [1.2.1](https://github.com/lembdev/media-converter-api/compare/v1.2.0...v1.2.1) (2025-10-11)
 
 ### Bug Fixes

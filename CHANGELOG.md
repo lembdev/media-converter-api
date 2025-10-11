@@ -1,3 +1,9 @@
+## [1.2.4](https://github.com/lembdev/media-converter-api/compare/v1.2.3...v1.2.4) (2025-10-11)
+
+### Bug Fixes
+
+* download file with redirects ([b85fedc](https://github.com/lembdev/media-converter-api/commit/b85fedc0b1098f5e1bf70c01d7dc928596e24032))
+
 ## [1.2.3](https://github.com/lembdev/media-converter-api/compare/v1.2.2...v1.2.3) (2025-10-11)
 
 ### Bug Fixes

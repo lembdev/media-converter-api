@@ -1,7 +1,7 @@
 import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
-import { ApiModule } from './api/api.module';
 import * as configs from 'src/infra/configs';
+import { ApiModule } from './api/api.module';
 
 @Module({
   imports: [

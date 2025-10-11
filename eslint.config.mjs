@@ -69,7 +69,7 @@ export default tseslint.config(
       'import-x/no-unused-modules': 'warn',
       'import-x/no-useless-path-segments': 'warn',
       'import-x/order': [
-        'warn',
+        'error',
         {
           groups: [
             'type',
@@ -99,7 +99,7 @@ export default tseslint.config(
       // Alphabetize named members within import specifiers: { A, B, C }
       // Use core rule alongside import-x/order (ignoreDeclarationSort avoids conflicts)
       'sort-imports': [
-        'warn',
+        'error',
         {
           ignoreCase: true,
           ignoreDeclarationSort: true,

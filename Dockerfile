@@ -15,7 +15,7 @@ FROM base AS production
 ENV HUSKY=0
 ENV NODE_ENV=production
 COPY package*.json ./
-RUN npm install --production 
+RUN npm set-script prepare "" && npm install --production 
 
 # ----------------------------
 FROM alpine:3.22.2 AS runner

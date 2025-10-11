@@ -7,10 +7,10 @@ import {
   ApiResponse,
   ApiTags,
 } from '@nestjs/swagger';
-import { FfprobeService } from 'src/app/services/ffprobe.service';
-import { FileCacheService } from 'src/app/services/file-cache.service';
-import { FileDownloadService } from 'src/app/services/file-download.service';
-import { ProbeUrlInput } from './inputs/probe-url.input';
+import { FfprobeService } from 'src/app/services/ffprobe/ffprobe.service';
+import { FileCacheService } from 'src/app/services/file/file-cache.service';
+import { FileDownloadService } from 'src/app/services/file/file-download.service';
+import { ProbeUrlInput } from '../inputs/probe-url.input';
 
 @ApiTags('probe')
 @Controller()

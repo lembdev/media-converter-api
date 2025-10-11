@@ -1,6 +1,9 @@
 import { Module } from '@nestjs/common';
+import { FfprobeService } from './services/ffprobe.service';
+import { FileCacheService } from './services/file-cache.service';
+import { FileDownloadService } from './services/file-download.service';
 
-const PROVIDERS = [];
+const PROVIDERS = [FileCacheService, FileDownloadService, FfprobeService];
 
 @Module({
   imports: [],

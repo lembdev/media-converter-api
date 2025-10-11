@@ -1,3 +1,13 @@
+## [1.2.0](https://github.com/lembdev/media-converter-api/compare/v1.1.2...v1.2.0) (2025-10-11)
+
+### Features
+
+* upgrade deps ([083060e](https://github.com/lembdev/media-converter-api/commit/083060e875cd7568efe1e3effa60ae8a5974c25b))
+
+### Bug Fixes
+
+* deps are not locked ([fea1c29](https://github.com/lembdev/media-converter-api/commit/fea1c2978f3e158025764cfcf01a714ce7b9f25b))
+
 ## [1.1.2](https://github.com/lembdev/media-converter-api/compare/v1.1.1...v1.1.2) (2025-10-11)
 
 ### Bug Fixes

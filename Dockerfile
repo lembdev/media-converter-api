@@ -6,7 +6,7 @@ RUN apk add --no-cache nodejs npm
 FROM base AS builder
 ENV HUSKY=0
 COPY package*.json ./
-RUN npm install
+RUN npm ci
 COPY . .
 RUN npm run build
 
@@ -15,7 +15,7 @@ FROM base AS production
 ENV HUSKY=0
 ENV NODE_ENV=production
 COPY package*.json ./
-RUN npm set-script prepare "" && npm install --production 
+RUN npm ci --omit=dev --omit=optional --ignore-scripts
 
 # ----------------------------
 FROM alpine:3.22.2 AS runner

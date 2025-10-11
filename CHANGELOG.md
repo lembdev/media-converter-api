@@ -1,3 +1,9 @@
+## [1.2.3](https://github.com/lembdev/media-converter-api/compare/v1.2.2...v1.2.3) (2025-10-11)
+
+### Bug Fixes
+
+* finaly docker build fix ([6b9b0a8](https://github.com/lembdev/media-converter-api/commit/6b9b0a8dbb7b12dd9d2f9ad57cb1d8595cc010fe))
+
 ## [1.2.2](https://github.com/lembdev/media-converter-api/compare/v1.2.1...v1.2.2) (2025-10-11)
 
 ### Bug Fixes

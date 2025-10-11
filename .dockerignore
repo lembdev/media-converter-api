@@ -33,8 +33,6 @@ README.md
 .prettierignore
 .prettierrc
 eslint.config.mjs
-tsconfig.json
-tsconfig.build.json
 
 # Other
 LICENSE

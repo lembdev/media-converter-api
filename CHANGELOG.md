@@ -1,3 +1,9 @@
+## [1.1.2](https://github.com/lembdev/media-converter-api/compare/v1.1.1...v1.1.2) (2025-10-11)
+
+### Bug Fixes
+
+* prepare script in CI/CD ([12fc3cd](https://github.com/lembdev/media-converter-api/commit/12fc3cd0d6903aa543b3d4fd0c91fe37b8a17a84))
+
 ## [1.1.1](https://github.com/lembdev/media-converter-api/compare/v1.1.0...v1.1.1) (2025-10-11)
 
 ### Bug Fixes

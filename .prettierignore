@@ -1,0 +1,32 @@
+# Dependencies
+node_modules
+dist
+
+# Build outputs
+*.js.map
+*.d.ts
+tsconfig.build.tsbuildinfo
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Coverage
+coverage
+*.lcov
+
+# Cache
+.cache
+.temp
+
+# IDE
+.idea
+.vscode
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+

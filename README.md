@@ -45,6 +45,26 @@ cd media-converter-api
 npm install
 ```
 
+### Conventional Commits
+
+Version bumping follows conventional commit standards:
+
+- `fix:` → patch version (0.0.1 → 0.0.2)
+- `feat:` → minor version (0.0.1 → 0.1.0)
+- `feat!:` or `BREAKING CHANGE:` → major version (0.0.1 → 1.0.0)
+
+### Docker Images
+
+Published Docker images are available at:
+
+```bash
+# Pull latest version
+docker pull lembdev/media-converter-api:latest
+
+# Pull specific version
+docker pull lembdev/media-converter-api:0.0.1
+```
+
 ## Running the Application
 
 ### Development Mode

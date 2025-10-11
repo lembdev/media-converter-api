@@ -49,7 +49,7 @@ export class FileDownloadService {
         let downloadedSize = 0;
         const fileStream = createWriteStream(filePath);
 
-        response.on('data', (chunk) => {
+        response.on('data', (chunk: Buffer) => {
           downloadedSize += chunk.length;
           if (downloadedSize > this.MAX_FILE_SIZE) {
             response.destroy();

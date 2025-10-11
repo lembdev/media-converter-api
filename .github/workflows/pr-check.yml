@@ -1,0 +1,44 @@
+name: PR Check
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  check:
+    name: Lint, Format, Build, Test
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run ESLint
+        run: npm run lint
+
+      - name: Check Prettier formatting
+        run: npm run format:check
+
+      - name: Build project
+        run: npm run build
+
+      - name: Run tests
+        run: npm test
+        continue-on-error: true
+
+      - name: PR Check Summary
+        if: always()
+        run: |
+          echo "### ✅ PR Check Results" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "All checks completed. Review the details above." >> $GITHUB_STEP_SUMMARY

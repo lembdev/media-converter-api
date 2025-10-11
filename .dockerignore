@@ -1,12 +1,40 @@
+# Dependencies
 node_modules
-dist
-npm-debug.log
+npm-debug.log*
+
+# Git
 .git
 .gitignore
-.env
-.env.*
-*.md
-.vscode
-.idea
+.github
+
+# Build outputs
+dist
+
+# Testing
 coverage
+*.spec.ts
+*.test.ts
+
+# IDE
+.idea
+.vscode
+*.swp
+*.swo
+
+# OS
 .DS_Store
+Thumbs.db
+
+# Documentation
+README.md
+*.md
+
+# CI/CD
+.prettierignore
+.prettierrc
+eslint.config.mjs
+tsconfig.json
+tsconfig.build.json
+
+# Other
+LICENSE

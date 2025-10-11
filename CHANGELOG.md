@@ -1,3 +1,9 @@
+## [1.1.1](https://github.com/lembdev/media-converter-api/compare/v1.1.0...v1.1.1) (2025-10-11)
+
+### Bug Fixes
+
+* correct semantic-release outputs for Docker job ([81007fa](https://github.com/lembdev/media-converter-api/commit/81007fa3d28f5b8e0cdaa32deaca2f709d047486))
+
 ## [1.1.0](https://github.com/lembdev/media-converter-api/compare/v1.0.0...v1.1.0) (2025-10-11)
 
 ### Features

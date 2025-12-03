@@ -1,4 +1,4 @@
-FROM alpine:3.22.2 AS base
+FROM alpine:3.23.0 AS base
 WORKDIR /app
 RUN apk add --no-cache nodejs npm
 
@@ -18,7 +18,7 @@ COPY package*.json ./
 RUN npm ci --omit=dev --omit=optional --ignore-scripts
 
 # ----------------------------
-FROM alpine:3.22.2 AS runner
+FROM alpine:3.23.0 AS runner
 WORKDIR /app
 
 LABEL maintainer="lembdev@gmail.com"
